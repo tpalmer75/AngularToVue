@@ -1,0 +1,66 @@
+@import url("reset.css");
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,700');
+
+body {
+	//background: #f0f0f0;
+	font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+	padding: 5px;
+	color: #333;
+}
+
+pre, code {
+	font-family: monospace;
+}
+
+h3 {
+	font-weight: 300;
+	font-size: 24px;
+	text-align: center;
+	margin: 48px 0 14px;
+}
+
+h4 {
+	font-weight: 700;
+	font-size: 18px;
+	margin-bottom: 8px;
+	color: #42b983;
+}
+
+h5 {
+	font-size: 14px;
+	color: #888;
+	margin: 12px 0;
+}
+
+p {
+	line-height: 1.6;
+	margin-bottom: 12px;
+}
+
+a {
+	color: #42b983;
+}
+
+.wrapper {
+	max-width: 1024px;
+	margin: auto;
+}
+
+.code-sample {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.code-sample h3 {
+	flex: 1 0 100%;
+}
+
+.column {
+	flex: 1 1 50%;
+	min-width: 350px;
+	padding: 15px;
+}
+
+.column.angular h4, .column.angular a {
+	color: #E53030;
+}

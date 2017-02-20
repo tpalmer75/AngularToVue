@@ -1,0 +1,20 @@
+<!doctype html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="css/github-gist.css">
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div id="app">
+			<div class="wrapper">
+				<p>Many of the examples here were taken from the AngularJS and VueJS docs, but are shown side by side for demonstration purposes.
+				<code-sample v-for="code in codeList" 
+					v-bind:content="code">
+				</code-sample>
+			</div>
+		</div>
+	</body>
+	<script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+	<script src="https://unpkg.com/highlightjs@9.8.0"></script>
+	<script src="js/code-list.js"/></script>
+	<script src="js/app.js"/></script>
+</html>
