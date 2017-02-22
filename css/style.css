@@ -4,12 +4,34 @@
 body {
 	//background: #f0f0f0;
 	font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
-	padding: 5px;
-	color: #333;
+	color: #2c3e50;
 }
 
-pre, code {
-	font-family: monospace;
+section {
+	// background: #eee;
+	background-image: linear-gradient(100deg, #183549 10%, #15232D 100%);
+	padding: 40px 0;
+	color: white;
+}
+
+section a {
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+
+h1 .green {
+	color: #42b983;
+}
+
+h2 {
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 1.6;
+	margin-bottom: 10px;
 }
 
 h3 {
@@ -28,8 +50,12 @@ h4 {
 
 h5 {
 	font-size: 14px;
-	color: #888;
+	color: #7f8c8d;
 	margin: 12px 0;
+}
+
+pre, code {
+	font-family: monospace;
 }
 
 p {
@@ -37,13 +63,34 @@ p {
 	margin-bottom: 12px;
 }
 
+aside {
+	font-style: italic;
+	font-size: 14px;
+	line-height: 1.4;
+	color: #7f8c8d;
+}
+
 a {
 	color: #42b983;
+}
+
+.right-align {
+	text-align: right;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+svg {
+	vertical-align: middle;
 }
 
 .wrapper {
 	max-width: 1024px;
 	margin: auto;
+	padding: 5px;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .code-sample {
