@@ -45,16 +45,16 @@ heading: 'Custom Directives',
 angular: {
   title: 'Angular Directives',
   description: '<p>Custom directives allow Angular to attach specific behavior to a DOM element.</p><p>Read more <a href="https://docs.angularjs.org/guide/directive">here</a>.',
-  html: `app.directive('fixedTable', function($window, $timeout) {
+  html: `<input autofocus>`,
+  css: '',
+  js: `app.directive('fixedTable', function() {
     return {
         restrict: 'A',
         link: function(scope, element, attrs) {
           element.focus()
         }
       }
-    });`,
-  css: '',
-  js: ``
+    });`
 },
 vue: {
   title: 'Vue Directives',
@@ -137,7 +137,7 @@ vue: {
 }, 
 
 {
-heading: 'Filtered Lists',
+heading: 'Basic String Filters',
 angular: {
   title: 'Angular Filters',
   description: '<p>Creating a simple search is as easy as using a scope variable as a filter. Angular will do the leg work for you.</p>',
@@ -291,184 +291,184 @@ vue: {
 }
 }, 
 
-{
-heading: 'State Routing',
-angular: {
-  title: 'Angular Router',
-  description: 'Description here.',
-  html: ``,
-  css: '',
-  js: ``
-},
-vue: {
-  title: 'Vue Router',
-  description: '',
-  html: ``,
-  css: '',
-  js: ``, 
-}
-}, 
+// {
+// heading: 'State Routing',
+// angular: {
+//   title: 'Angular Router',
+//   description: 'Description here.',
+//   html: ``,
+//   css: '',
+//   js: ``
+// },
+// vue: {
+//   title: 'Vue Router',
+//   description: '',
+//   html: ``,
+//   css: '',
+//   js: ``, 
+// }
+// }, 
 
-{
-heading: 'State Routing',
-angular: {
-  title: 'ui-router',
-  description: 'Description here.',
-  html: ``,
-  css: '',
-  js: ``
-},
-vue: {
-  title: 'Vue Router',
-  description: '',
-  html: ``,
-  css: '',
-  js: ``, 
-}
-}, 
+// {
+// heading: 'State Routing',
+// angular: {
+//   title: 'ui-router',
+//   description: 'Description here.',
+//   html: ``,
+//   css: '',
+//   js: ``
+// },
+// vue: {
+//   title: 'Vue Router',
+//   description: '',
+//   html: ``,
+//   css: '',
+//   js: ``, 
+// }
+// }, 
 
-{
-heading: 'Watchers',
-angular: {
-  title: '$watch',
-  description: 'Description here.',
-  html: ``,
-  css: '',
-  js: ``
-},
-vue: {
-  title: 'watch',
-  description: '',
-  html: ``,
-  css: '',
-  js: ``, 
-}
-}, 
+// {
+// heading: 'Watchers',
+// angular: {
+//   title: '$watch',
+//   description: 'Description here.',
+//   html: ``,
+//   css: '',
+//   js: ``
+// },
+// vue: {
+//   title: 'watch',
+//   description: '',
+//   html: ``,
+//   css: '',
+//   js: ``, 
+// }
+// }, 
 
-{
-heading: 'Currency Filter',
-angular: {
-  title: '',
-  description: 'Description here.',
-  html: ``,
-  css: '',
-  js: ``
-},
-vue: {
-  title: '',
-  description: '',
-  html: ``,
-  css: '',
-  js: ``, 
-}
-}, 
+// {
+// heading: 'Currency Filter',
+// angular: {
+//   title: '',
+//   description: 'Description here.',
+//   html: ``,
+//   css: '',
+//   js: ``
+// },
+// vue: {
+//   title: '',
+//   description: '',
+//   html: ``,
+//   css: '',
+//   js: ``, 
+// }
+// }, 
 
-{
-heading: 'Date Filter',
-angular: {
-  title: '',
-  description: 'Description here.',
-  html: ``,
-  css: '',
-  js: ``
-},
-vue: {
-  title: '',
-  description: '',
-  html: ``,
-  css: '',
-  js: ``, 
-}
-}, 
+// {
+// heading: 'Date Filter',
+// angular: {
+//   title: '',
+//   description: 'Description here.',
+//   html: ``,
+//   css: '',
+//   js: ``
+// },
+// vue: {
+//   title: '',
+//   description: '',
+//   html: ``,
+//   css: '',
+//   js: ``, 
+// }
+// }, 
 
-{
-heading: 'JSON Filter',
-angular: {
-  title: '',
-  description: 'Description here.',
-  html: ``,
-  css: '',
-  js: ``
-},
-vue: {
-  title: '',
-  description: '',
-  html: ``,
-  css: '',
-  js: ``, 
-}
-}, 
+// {
+// heading: 'JSON Filter',
+// angular: {
+//   title: '',
+//   description: 'Description here.',
+//   html: ``,
+//   css: '',
+//   js: ``
+// },
+// vue: {
+//   title: '',
+//   description: '',
+//   html: ``,
+//   css: '',
+//   js: ``, 
+// }
+// }, 
 
-{
-heading: 'limitTo Filter',
-angular: {
-  title: '',
-  description: 'Description here.',
-  html: ``,
-  css: '',
-  js: ``
-},
-vue: {
-  title: '',
-  description: '',
-  html: ``,
-  css: '',
-  js: ``, 
-}
-}, 
+// {
+// heading: 'limitTo Filter',
+// angular: {
+//   title: '',
+//   description: 'Description here.',
+//   html: ``,
+//   css: '',
+//   js: ``
+// },
+// vue: {
+//   title: '',
+//   description: '',
+//   html: ``,
+//   css: '',
+//   js: ``, 
+// }
+// }, 
 
-{
-heading: 'Lowercase Filter',
-angular: {
-  title: '',
-  description: 'Description here.',
-  html: ``,
-  css: '',
-  js: ``
-},
-vue: {
-  title: '',
-  description: '',
-  html: ``,
-  css: '',
-  js: ``, 
-}
-}, 
+// {
+// heading: 'Lowercase Filter',
+// angular: {
+//   title: '',
+//   description: 'Description here.',
+//   html: ``,
+//   css: '',
+//   js: ``
+// },
+// vue: {
+//   title: '',
+//   description: '',
+//   html: ``,
+//   css: '',
+//   js: ``, 
+// }
+// }, 
 
-{
-heading: 'Number Filter',
-angular: {
-  title: '',
-  description: 'Description here.',
-  html: ``,
-  css: '',
-  js: ``
-},
-vue: {
-  title: '',
-  description: '',
-  html: ``,
-  css: '',
-  js: ``, 
-}
-}, 
+// {
+// heading: 'Number Filter',
+// angular: {
+//   title: '',
+//   description: 'Description here.',
+//   html: ``,
+//   css: '',
+//   js: ``
+// },
+// vue: {
+//   title: '',
+//   description: '',
+//   html: ``,
+//   css: '',
+//   js: ``, 
+// }
+// }, 
 
-{
-heading: 'Uppercase Filter',
-angular: {
-  title: '',
-  description: 'Description here.',
-  html: ``,
-  css: '',
-  js: ``
-},
-vue: {
-  title: '',
-  description: '',
-  html: ``,
-  css: '',
-  js: ``, 
-}
-}, 
+// {
+// heading: 'Uppercase Filter',
+// angular: {
+//   title: '',
+//   description: 'Description here.',
+//   html: ``,
+//   css: '',
+//   js: ``
+// },
+// vue: {
+//   title: '',
+//   description: '',
+//   html: ``,
+//   css: '',
+//   js: ``, 
+// }
+// }, 
 
 ]

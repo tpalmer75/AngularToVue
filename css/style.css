@@ -148,8 +148,6 @@ input {
 	border: 2px solid #ccc;
 	text-indent: 10px;
 	width: 100%;
-	//max-width: 500px;
-	//margin: auto;
 	display: block;
 	transition: all .2s;
 	padding-right: 35px;
@@ -169,3 +167,15 @@ input:focus {
 	font-size: 14px;
 	color: #7f8c8d;
 }
+
+.no-results {
+	max-width: 450px;
+	margin: auto;
+	text-align: center;
+	margin-top: 50px;
+}
+
+[v-cloak] {
+	display: none;
+}
+
