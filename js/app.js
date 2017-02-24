@@ -8,17 +8,7 @@ Vue.directive('highlightjs', {
       }
       hljs.highlightBlock(target)
     })
-  },
-  // componentUpdated: function(el, binding) {
-  //   // after an update, re-fill the content and then highlight
-  //   let targets = el.querySelectorAll('code')
-  //   targets.forEach((target) => {
-  //     if (binding.value) {
-  //       target.innerHTML = binding.value
-  //       hljs.highlightBlock(target)
-  //     }
-  //   })
-  // }
+  }
 })
 
 Vue.component('code-sample', {
@@ -36,7 +26,7 @@ Vue.component('code-sample', {
           <pre v-highlightjs><code class="css">{{content.angular.css}}</code></pre>
         </div>
         <div v-if="content.angular.js">
-          <h5>Javascript</h5>
+          <h5>JavaScript</h5>
           <pre v-highlightjs><code class="js">{{content.angular.js}}</code></pre>
         </div>
       </div>
@@ -52,7 +42,7 @@ Vue.component('code-sample', {
           <pre v-highlightjs><code class="css">{{content.vue.css}}</code></pre>
         </div>
         <div v-if="content.vue.js">
-          <h5>Javascript</h5>
+          <h5>JavaScript</h5>
           <pre v-highlightjs><code class="js">{{content.vue.js}}</code></pre>
         </div>
       </div>`,
@@ -69,9 +59,22 @@ new Vue({
     methods: {
     },
     data: {
-        codeList: codeList
+        codeList: codeList,
+        searchTerm: ''
     },
     computed: {
+      filteredSamples: function() {
+        var searchTerm = this.searchTerm.toLowerCase();
+
+        if (searchTerm !== '') {
+          return this.codeList.filter(function(item) {
+            return item.heading.toLowerCase().indexOf(searchTerm) !== -1 || item.angular.title.toLowerCase().indexOf(searchTerm) !== -1 || item.angular.description.toLowerCase().indexOf(searchTerm) !== -1 || item.vue.title.toLowerCase().indexOf(searchTerm) !== -1 || item.vue.description.toLowerCase().indexOf(searchTerm) !== -1
+            //return true
+          })
+        } else {
+          return codeList
+        }
+      }
     }
 })
 

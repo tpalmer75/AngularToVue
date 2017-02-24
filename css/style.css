@@ -81,6 +81,12 @@ a {
 	flex-direction: column;
 }
 
+@media all and (max-width: 709px) {
+	.right-align {
+		text-align: left;
+	}
+}
+
 svg {
 	vertical-align: middle;
 }
@@ -89,6 +95,9 @@ svg {
 	max-width: 1024px;
 	margin: auto;
 	padding: 5px;
+}
+
+.flex-container {
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -108,6 +117,45 @@ svg {
 	padding: 15px;
 }
 
+@media all and (max-width: 500px) {
+	.column {
+		min-width: 250px;
+	}
+}
+
 .column.angular h4, .column.angular a {
 	color: #E53030;
+}
+
+.search {
+	padding: 15px 15px 30px;
+	position: relative;
+}
+
+input {
+	height: 40px;
+	font-size: 18px;
+	border-radius: 999px;
+	border: 2px solid #ccc;
+	text-indent: 10px;
+	width: 100%;
+	max-width: 500px;
+	margin: auto;
+	display: block;
+	transition: all .2s;
+}
+
+input:focus {
+	border: 2px solid #42b983;
+	box-shadow: 0 0 5px #42b983;
+	outline: 0;
+}
+
+.search-subtitle {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	left: 0;
+	font-size: 14px;
+	color: #7f8c8d;
 }
