@@ -128,8 +128,17 @@ svg {
 }
 
 .search {
-	padding: 15px 15px 30px;
+	padding: 15px;
 	position: relative;
+	max-width: 500px;
+	margin: auto;
+}
+
+.search svg {
+	fill: #2c3e50;
+	position: absolute;
+	right: 24px;
+	top: 22px;
 }
 
 input {
@@ -139,10 +148,11 @@ input {
 	border: 2px solid #ccc;
 	text-indent: 10px;
 	width: 100%;
-	max-width: 500px;
-	margin: auto;
+	//max-width: 500px;
+	//margin: auto;
 	display: block;
 	transition: all .2s;
+	padding-right: 35px;
 }
 
 input:focus {

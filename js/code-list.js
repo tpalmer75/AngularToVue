@@ -11,7 +11,7 @@ angular: {
   </li>
 </ul>`,
   css: '',
-  js: `.controller('example', function($scope) {
+  js: `app.controller('example', function($scope) {
   $scope.items = [
     { message: 'Foo' },
     { message: 'Bar' }
@@ -45,16 +45,23 @@ heading: 'Custom Directives',
 angular: {
   title: 'Angular Directives',
   description: '<p>Custom directives allow Angular to attach specific behavior to a DOM element.</p><p>Read more <a href="https://docs.angularjs.org/guide/directive">here</a>.',
-  html: `app.directive("`,
+  html: `app.directive('fixedTable', function($window, $timeout) {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+          element.focus()
+        }
+      }
+    });`,
   css: '',
   js: ``
 },
 vue: {
   title: 'Vue Directives',
   description: '<p>Custom directives in VueJS are very similar to AngularJS, except with simpler syntax. For most behavior, however, the <a href="https://vuejs.org/v2/guide/custom-directive.html">docs</a> recommend that you use components.</p>',
-  html: `<input v-focus>`,
+  html: `<input v-autofocus>`,
   css: '',
-  js: `// Register a global custom directive called v-focus
+  js: `// Register a global custom directive called v-autofocus
 Vue.directive('focus', {
   // When the bound element is inserted into the DOM...
   inserted: function (el) {
@@ -86,7 +93,7 @@ angular: {
 <!-- Pass in the $event object to get keycode -->
 <button ng-keyup="doSomething($event)">Button</button>`,
   css: '',
-  js: `.controller('example', function($scope) {
+  js: `app.controller('example', function($scope) {
   $scope.counter = 0;
   $scope.doSomething = function() {
     alert('something');
@@ -138,7 +145,7 @@ angular: {
   <li ng-repeat="item in items | searchTerm">{{item}}</li>
 </ul>`,
   css: '',
-  js: `.controller('example', function($scope) {
+  js: `app.controller('example', function($scope) {
   $scope.items = [
     { message: 'Foo' },
     { message: 'Bar' }
@@ -182,7 +189,7 @@ angular: {
   <li v-for="item in items | exampleFilter : searchTerm">{{item}}</li>
 </ul>`,
   css: '',
-  js: `.controller('example', function($scope) {
+  js: `app.controller('example', function($scope) {
   $scope.items = [
     { message: 'Foo' },
     { message: 'Bar' }
@@ -238,7 +245,7 @@ angular: {
   <li ng-repeat="item in items | orderBy: 'message'">{{item}}</li>
 </ul>`,
   css: '',
-  js: `.controller('example', function($scope) {
+  js: `app.controller('example', function($scope) {
   $scope.items = [
     { message: 'Foo' },
     { message: 'Bar' }
