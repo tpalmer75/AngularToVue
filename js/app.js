@@ -1,13 +1,14 @@
 Vue.directive('highlightjs', {
   deep: true,
   bind: function(el, binding) {
-    let targets = el.querySelectorAll('code')
-    targets.forEach((target) => {
+    var targets = el.querySelectorAll('code');
+    for (i=0; i<targets.length;i++) {
+      target = targets[i];
       if (binding.value) {
         target.innerHTML = binding.value
       }
       hljs.highlightBlock(target)
-    })
+    }
   }
 })
 
